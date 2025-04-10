@@ -1,48 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AURELIONX – Walk Like Royalty</title>
+  <title>AURELIONX - Luxury Footwear</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway:wght@400;700&display=swap');
-
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Raleway', sans-serif;
-      background-color: #000;
-      color: #ffd700;
-      scroll-behavior: smooth;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1602524813182-fc3e89b1c508?ixlib=rb-4.0.3&auto=format&fit=crop&w=1050&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
     }
 
     header {
-      background-color: #111;
-      padding: 20px;
-      text-align: center;
-      border-bottom: 2px solid #ffd700;
-      animation: fadeInDown 1s ease-out;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      animation: slideDown 1s ease-out;
     }
 
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3em;
-      margin: 0;
-      letter-spacing: 3px;
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
-    nav {
-      text-align: center;
-      margin-top: 10px;
+    .logo {
+      height: 60px;
+      animation: fadeIn 2s ease-in-out;
     }
 
     nav a {
-      color: #ffd700;
+      color: gold;
+      margin-left: 25px;
       text-decoration: none;
-      margin: 0 15px;
       font-weight: bold;
-      font-size: 1.1em;
       transition: color 0.3s ease;
+      animation: fadeIn 1.5s ease-in-out;
     }
 
     nav a:hover {
@@ -50,115 +57,197 @@
     }
 
     .hero {
-      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1583337130417-3346a1c1270c') no-repeat center center/cover;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .hero h2 {
-      font-size: 3.5em;
-      background: linear-gradient(to right, #ffd700, #fff5cc);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-family: 'Playfair Display', serif;
-    }
-
-    .section {
-      padding: 60px 20px;
-      text-align: center;
-      animation: fadeInUp 1s ease-out;
-    }
-
-    .section h3 {
-      font-size: 2.5em;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 20px;
-    }
-
-    .footer {
-      background-color: #111;
-      text-align: center;
-      padding: 20px;
-      border-top: 2px solid #ffd700;
-      color: #aaa;
-      font-size: 0.9em;
-    }
-
-    .ceo-credit {
-      margin-top: 30px;
-      font-style: italic;
-      font-size: 1em;
-      color: #888;
+      padding: 140px 20px 100px;
+      background-color: rgba(0, 0, 0, 0.6);
+      animation: fadeInUp 1.5s ease-in-out;
     }
 
     @keyframes fadeIn {
-      from {opacity: 0; transform: scale(0.95);}
-      to {opacity: 1; transform: scale(1);}
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes fadeInUp {
-      from {opacity: 0; transform: translateY(30px);}
-      to {opacity: 1; transform: translateY(0);}
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
-    @keyframes fadeInDown {
-      from {opacity: 0; transform: translateY(-30px);}
-      to {opacity: 1; transform: translateY(0);}
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      color: gold;
+      margin-bottom: 20px;
     }
 
-    .logo {
-      display :block;
-      margin :0 auto;
-      transform: rotate(0deg);
-      max-height: 100px; 
-    }  
-    
+    .hero p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: gold;
+      color: black;
+      padding: 12px 30px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: background 0.3s ease, transform 0.3s ease;
+      text-transform: uppercase;
+    }
+
+    .btn:hover {
+      background-color: #d4af37;
+      transform: scale(1.05);
+    }
+
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.75);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: gold;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .product-card {
+      background-color: #111;
+      padding: 20px;
+      border: 1px solid gold;
+      border-radius: 15px;
+      width: 260px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1.2s ease-in-out;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px gold;
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .product-card p {
+      color: #ccc;
+    }
+
+    .shop-section {
+      padding: 80px 20px;
+      text-align: center;
+      background-color: #000;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .shop-section h2 {
+      font-size: 2.5rem;
+      color: gold;
+      margin-bottom: 20px;
+    }
+
+    .shop-section p {
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .shop-btn {
+      background-color: gold;
+      color: black;
+      padding: 14px 40px;
+      border: none;
+      font-size: 1.1rem;
+      cursor: pointer;
+      border-radius: 30px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .shop-btn:hover {
+      background-color: #d4af37;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: black;
+      text-align: center;
+      padding: 25px;
+      color: gold;
+      font-size: 0.9rem;
+      animation: fadeIn 2s ease-in-out;
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <img src="aurelionx-png.logo.png" alt="AURELIONX Logo" style="height: 80px; transform: rotate(0deg);">
-
-    <h1>AURELIONX</h1>
+    <img src="aurelionx-png.logo.png" alt="AURELIONX Logo" class="logo">
     <nav>
-      <a href="#">Home</a>
-      <a href="#about">About</a>
+      <a href="#home">Home</a>
       <a href="#collection">Collection</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Luxury Shoes for the Fearless</h2>
+  <section class="hero" id="home">
+    <h1>AURELIONX</h1>
+    <p>Luxury Footwear Redefined — Walk Like a King</p>
+    <button class="btn">Explore Collection</button>
   </section>
 
-  <section id="about" class="section">
-    <h3>Our Legacy</h3>
-    <p>AURELIONX isn’t just about shoes — it’s about walking with pride, power, and purpose.</p>
+  <section class="section" id="collection">
+    <h2>Our Signature Collection</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/260x160?text=King's+Choice" alt="Shoe 1">
+        <p><strong>King’s Choice</strong><br>Coming Soon</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/260x160?text=Gold+Runner" alt="Shoe 2">
+        <p><strong>Gold Runner</strong><br>Coming Soon</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/260x160?text=Lion+Legacy" alt="Shoe 3">
+        <p><strong>Lion Legacy</strong><br>Coming Soon</p>
+      </div>
+    </div>
   </section>
 
-  <section id="collection" class="section">
-    <h3>Signature Collection</h3>
-    <p>Each design is crafted for those who demand elegance and command attention.</p>
+  <section class="shop-section">
+    <h2>Shop Now</h2>
+    <p>Get ready to walk in royalty. Our premium shoe collection will soon be available for purchase online.</p>
+    <button class="shop-btn">Coming Soon</button>
   </section>
 
-  <section id="contact" class="section">
-    <h3>Connect With Us</h3>
-    <p>Email: contact@aurelionx.com</p>
+  <section class="section" id="about">
+    <h2>About AURELIONX</h2>
+    <p>AURELIONX is more than just footwear — it’s a symbol of legacy, luxury, and lion-hearted confidence. Designed for those who lead, not follow.</p>
   </section>
 
-  <section class="section">
-    <h3>Our Story</h3>
-    <p>Founded with a dream to define royalty through every step, AURELIONX was born to lead the luxury footwear world. Our inspiration comes from the strength of a lion, the elegance of a crown, and the fire of ambition.</p>
-    <div class="ceo-credit">— AUREX, CEO & Visionary of AURELIONX</div>
+  <section class="section" id="contact">
+    <h2>Contact & Social</h2>
+    <p>Email: <a href="mailto:luxury@aurelionx.com" style="color:gold">luxury@aurelionx.com</a><br>
+    Instagram: <a href="https://instagram.com/aurelionx.official" target="_blank" style="color:gold">@aurelionx.official</a></p>
   </section>
 
-  <footer class="footer">
-    &copy; 2025 AURELIONX. All rights reserved.
+  <footer>
+    <p>&copy; 2025 AURELIONX. All Rights Reserved. | Designed for dreamers who dare.</p>
   </footer>
 </body>
+
 </html>
+
